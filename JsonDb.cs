@@ -147,7 +147,7 @@ namespace JsonDb
 
         public override int GetHashCode()
         {
-            int sum = new Random().Next((int)DateTime.Now.Ticks);
+            int sum = 0;
 
             foreach (T item in _rows)
             { 

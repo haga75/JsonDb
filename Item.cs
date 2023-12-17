@@ -11,7 +11,7 @@ namespace JsonDbTest
         public IList<string>? Content { get; set; }
         public override int GetHashCode()
         {
-            return (int)Convert.ToUInt32(Encoding.ASCII.GetBytes(Id.ToString()));
+            return (int)Convert.ToUInt32(Encoding.ASCII.GetBytes(Id.ToString() + Name));
         }
     }
 }

@@ -8,10 +8,7 @@ namespace JsonDbTest
         public string? W { get; set; }
         public override int GetHashCode()
         {
-            return (int)Convert.ToUInt32(Encoding.ASCII.GetBytes(1.ToString()));
-            //var result = (int)Convert.ToUInt32(Encoding.ASCII.GetBytes(s: W));
-
-            //return result;
+            return (int)Convert.ToUInt32(Encoding.UTF8.GetBytes(s: W));
         }
     }
 }
