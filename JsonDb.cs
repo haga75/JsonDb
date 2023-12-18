@@ -8,7 +8,7 @@ namespace JsonDb
 {
     public class JsonDb<T> : IList<T>
     {
-        private IList<T>? _rows = null;
+        private IList<T> _rows = null;
 
         private string _path;
         
