@@ -8,7 +8,7 @@ namespace JsonDb
 {
     public class JsonDb<T> : IList<T>
     {
-        private IList<T>? _rows = null;
+        private IList<T> _rows = null;
 
         private string _path;
         
@@ -101,12 +101,10 @@ namespace JsonDb
         {
             foreach (T row in _rows)
             {
-                if (item.GetHashCode()
-                    != row.GetHashCode())
+                if (item.GetHashCode() == row.GetHashCode())
                 {
-                    continue;
+                    return true;
                 }
-                return true;
             }
 
             return false;
